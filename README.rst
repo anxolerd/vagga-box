@@ -49,6 +49,11 @@ using the following command-line::
 
     vagga _box upgrade_vagga
 
+By default the command above will upgrade to the latest stable vagga version. If
+you want to upgrade to the latest testing version of vagga pass
+:code:`--testing` argument to the command::
+
+    vagga _box upgrade_vagga --testing
 
 Short FAQ
 =========
