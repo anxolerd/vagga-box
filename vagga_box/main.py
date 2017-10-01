@@ -110,8 +110,10 @@ def main():
             virtualbox.stop_vm()
             return sys.exit(0)
         elif args.command[1:2] == ['upgrade_vagga']:
+            upgrade_mode = args.command[2:3]
+            upgarde_cmd = ['/usr/local/bin/upgrade-vagga'] + upgrade_mode
             returncode = subprocess.Popen(
-                    BASE_SSH_COMMAND + ['/usr/local/bin/upgrade-vagga'],
+                    BASE_SSH_COMMAND + upgarde_cmd
                 ).wait()
             return sys.exit(returncode)
         elif args.command[1:2] == ['mount']:
